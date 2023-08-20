@@ -87,13 +87,26 @@ PRODUCT_PACKAGES += \
     libhypervintf \
     libsensorndkbridge
 
+PRODUCT_PACKAGES += \
+    libhwjpeg
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images_vendor
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.composer@2.4-service
+    android.hardware.graphics.allocator-V1-service \
+    android.hardware.graphics.mapper@4.0-impl
+
+PRODUCT_PACKAGES += \
+    android.hardware.composer.hwc3-service.slsi \
+#    gralloc.exynos2100 \
+    libcsc \
+    libexynosgscaler \
+    libexynosscaler \
+    libexynosutils \
+    libexynosv4l2
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -128,13 +141,9 @@ PRODUCT_PACKAGES += \
    libhwbinder \
    libhwbinder.vendor
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light-service.samsung
-
 # OMX
 PRODUCT_PACKAGES += \
-    libepicoperator
+   libepicoperator
 
 # Media
 PRODUCT_COPY_FILES += \
@@ -251,11 +260,13 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/samsung \
-    hardware/samsung/aidl/power-libperfmgr
+    hardware/samsung/aidl/power-libperfmgr \
+    hardware/samsung_slsi-linaro/exynos/gralloc4
 
 # Memtrack
 PRODUCT_PACKAGES += \
-    android.hardware.memtrack-service.samsung-mali
+    android.hardware.memtrack-service.samsung-mali \
+    libion
 
 # Neural networks
 PRODUCT_PACKAGES += \
