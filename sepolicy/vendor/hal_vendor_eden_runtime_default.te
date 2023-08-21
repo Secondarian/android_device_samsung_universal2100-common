@@ -38,6 +38,8 @@ allow hal_vendor_eden_runtime_default sysfs_devices_system_cpu:file rw_file_perm
 
 allow hal_vendor_eden_runtime_default traced_producer_socket:sock_file write;
 
+allow hal_vendor_eden_runtime_default sysfs_gpu:file { write };
+
 vndbinder_use(hal_vendor_eden_runtime_default)
 
 dontaudit hal_vendor_eden_runtime_default system_data_file:dir search;

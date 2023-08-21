@@ -72,8 +72,8 @@ PRODUCT_PACKAGES += \
     libkeymaster4_1support.vendor:64
 
 # Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
+#PRODUCT_PACKAGES += \
+#    vendor.lineage.health-service.default
 
 # Bluetooth
 PRODUCT_PACKAGES += \

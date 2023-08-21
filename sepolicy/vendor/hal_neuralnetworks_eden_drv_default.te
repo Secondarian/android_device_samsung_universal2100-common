@@ -29,3 +29,5 @@ allow hal_neuralnetworks_eden_drv_default traced_producer_socket:sock_file write
 
 dontaudit hal_neuralnetworks_eden_drv_default system_data_file:dir search;
 dontaudit hal_neuralnetworks_eden_drv_default traced:unix_stream_socket connectto;
+
+allow hal_neuralnetworks_eden_drv_default sysfs_gpu:file { write };
