@@ -24,11 +24,17 @@
          The display is dozing in a low power state; it is still on but is
          optimized for showing system-provided content while the device is
          non-interactive. -->
-    <bool name="doze_display_state_supported">true</bool>
+    <bool name="doze_display_state_supported">false</bool>
 
     <!-- Threshold in micro watts above which a charger is rated as "fast"; 10.8W  -->
     <integer name="config_chargingFastThreshold">10800000</integer>
 
     <!-- Color of the UDFPS pressed view -->
     <color name="config_udfpsColor">#00ffffff</color>
+
+    <!-- Maximum vertical offset of statusbar for burn-in protection -->
+    <dimen name="status_bar_offset_max_y">4dp</dimen>
+
+    <!-- Preferred max refresh rate at AOD & Ambient Display, if supported by the display. -->
+    <integer name="config_aodMaxRefreshRate">60</integer>
 </resources>
